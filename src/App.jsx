@@ -1,20 +1,11 @@
-import { useState } from 'react'
+import React, { useEffect } from 'react';
 import './App.css'
-import Navbar from './components/Navbar/Navbar'
 import {BrowserRouter, Routes, Route} from "react-router"
-
-import Hero from './components/Hero/Hero'
-import Skills from './components/Skills/Skills'
-import WorkExprience from './components/WrokExperience/workExprience'
-import ContactMe from './components/ContactMe/ContactMe'
-import Work from './components/Work/Work'
-import Projects from './components/Projects/Projects.jsx'
+import ScrollReveal from 'scrollreveal';
+import { Toaster } from 'react-hot-toast'
 import Home from './components/home/Home.jsx'
 import ProjectFrontend from './components/Projects/ProjectFrontend.jsx'
 import ProjectUI from './components/Projects/ProjectUI.jsx'
-import React, { useEffect } from 'react';
-import ScrollReveal from 'scrollreveal';
-import { Toaster } from 'react-hot-toast'
 import Soundbar from './components/Soundbar'
 
 function App() {
