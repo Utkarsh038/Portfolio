@@ -18,3 +18,17 @@
         padding: 0 1rem; /* Reduced padding for smaller screens */
     }
 }
+
+/* For very small mobile screens */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.75rem; /* Even less padding for very small screens */
+    }
+}
+
+/* For extra small screens */
+@media (max-width: 380px) {
+    .container {
+        padding: 0 0.5rem; /* Minimal padding for extra small screens */
+    }
+}

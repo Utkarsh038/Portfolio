@@ -109,9 +109,23 @@ const LeetCodeStats = ({ username = "Utkarsh_Raj32" }) => {
           <div className="solved-chart-container">
             <div className="circular-progress">
               <svg className="progress-ring" width="120" height="120">
+                <defs>
+                  <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#4caf50" />
+                    <stop offset="50%" stopColor="#66bb6a" />
+                    <stop offset="100%" stopColor="#81c784" />
+                  </linearGradient>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                    <feMerge> 
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
                 <circle
                   className="progress-ring-background"
-                  stroke="#333"
+                  stroke="var(--border-color)"
                   strokeWidth="8"
                   fill="transparent"
                   r="52"
@@ -120,7 +134,7 @@ const LeetCodeStats = ({ username = "Utkarsh_Raj32" }) => {
                 />
                 <circle
                   className="progress-ring-progress"
-                  stroke="#4caf50"
+                  stroke="url(#progressGradient)"
                   strokeWidth="8"
                   fill="transparent"
                   r="52"
@@ -128,6 +142,7 @@ const LeetCodeStats = ({ username = "Utkarsh_Raj32" }) => {
                   cy="60"
                   strokeDasharray={`${2 * Math.PI * 52}`}
                   strokeDashoffset={`${2 * Math.PI * 52 * (1 - calculatePercentage(totalSolved, totalQuestions) / 100)}`}
+                  filter="url(#glow)"
                 />
               </svg>
               <div className="chart-center">

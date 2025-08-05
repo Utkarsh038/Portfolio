@@ -76,6 +76,7 @@
   justify-content: center;
   align-items: center;
   margin: 20px 0;
+  position: relative;
 }
 
 .circular-progress {
@@ -85,17 +86,35 @@
 
 .progress-ring {
   transform: rotate(-90deg);
-  transition: stroke-dashoffset 0.5s ease-in-out;
+  transition: all 0.8s ease-in-out;
+  filter: drop-shadow(0 0 8px rgba(76, 175, 80, 0.3));
+}
+
+.progress-ring:hover {
+  filter: drop-shadow(0 0 12px rgba(76, 175, 80, 0.5));
+  transform: rotate(-90deg) scale(1.05);
 }
 
 .progress-ring-background {
-  stroke: rgba(255, 255, 255, 0.1);
+  stroke: var(--border-color);
+  stroke-width: 8;
 }
 
 .progress-ring-progress {
-  stroke: #4caf50;
+  stroke: url(#progressGradient);
   stroke-linecap: round;
-  transition: stroke-dashoffset 0.8s ease-in-out;
+  stroke-width: 8;
+  transition: stroke-dashoffset 1.2s ease-in-out;
+  animation: progressPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes progressPulse {
+  0% {
+    stroke-width: 8;
+  }
+  100% {
+    stroke-width: 10;
+  }
 }
 
 .chart-center {
@@ -107,11 +126,22 @@
 }
 
 .chart-center .stat-number {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   color: #4caf50;
   margin-bottom: 0;
   line-height: 1;
+  text-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+  animation: numberGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes numberGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(76, 175, 80, 0.6);
+  }
 }
 
 .total-questions {
@@ -122,10 +152,44 @@
 }
 
 .percentage {
-  font-size: 12px;
+  font-size: 14px;
   color: #64b5f6;
   font-weight: 600;
   line-height: 1;
+  text-shadow: 0 0 8px rgba(100, 181, 246, 0.3);
+}
+
+.stat-card.total-solved {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(129, 199, 132, 0.05));
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card.total-solved::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(76, 175, 80, 0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+  z-index: 0;
+}
+
+.stat-card.total-solved > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .progress-bar {
@@ -293,8 +357,22 @@
     height: 100px;
   }
 
+  .progress-ring circle {
+    r: 42;
+    cx: 50;
+    cy: 50;
+  }
+
   .chart-center .stat-number {
     font-size: 20px;
+  }
+
+  .total-questions {
+    font-size: 12px;
+  }
+
+  .percentage {
+    font-size: 12px;
   }
 }
 
@@ -308,7 +386,25 @@
     height: 90px;
   }
 
+  .progress-ring circle {
+    r: 37;
+    cx: 45;
+    cy: 45;
+  }
+
   .chart-center .stat-number {
     font-size: 18px;
+  }
+
+  .total-questions {
+    font-size: 11px;
+  }
+
+  .percentage {
+    font-size: 11px;
+  }
+
+  .solved-chart-container {
+    margin: 15px 0;
   }
 }
