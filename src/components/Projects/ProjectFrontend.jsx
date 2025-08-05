@@ -31,7 +31,7 @@ function ProjectFrontend() {
     img1={img1}
     img2={img2}
     img3={img3}
-     link = {"https://delightful-pudding-133fa3.netlify.app/"}
+     link = {"https://portfolio-pied-psi-j110almlqm.vercel.app/"}
     />
     <ProjectCard 
     title={"AI Career Website"}
