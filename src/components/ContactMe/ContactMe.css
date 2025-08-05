@@ -1,0 +1,104 @@
+
+.contact-container {
+    margin: 4rem 0;
+    position: relative;
+}
+
+.contact-container h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+}
+
+.contact-content {
+    display: flex;
+    gap: 10rem;
+}
+
+.social-icon {
+    display: flex;
+    gap: 2rem;
+  
+}
+
+.resume {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+   background: transparent;
+  
+    margin-top: 0.5rem;
+    transition: 0.3s ease;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.resume:hover {
+    background: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    color: var(--text-white);
+}
+
+@media (max-width: 1025px) {
+    .contact-content {
+        gap: 4rem;
+    }
+    form {
+        width: 103%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        gap: 1rem;
+        
+    }
+    form {
+        width: 100%;
+    }
+
+    .social-icon {
+        gap: 0.8rem;
+
+    }
+}
+@media (max-width: 600px) {
+    .contact-content {
+        gap: 1rem;
+        flex-direction: column;
+        
+    }
+    form {
+        width: 100%;
+    }
+    
+    .social-icon {
+        display: flex;
+        gap: 1rem;
+        width: 60%;
+        
+    }
+    
+    .social {
+        display:flex ; 
+        gap: 1.3rem;
+    }
+    
+    .contact-container h5 {
+        font-size: 1.3rem;
+        /* font-weight: 600; */
+        margin-bottom: 2rem;
+    }
+
+
+
+    
+}
+@media (max-width: 380px) {
+    .social {
+    display:flex ; 
+    gap: 1rem;
+    }
+}

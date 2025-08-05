@@ -1,0 +1,160 @@
+
+.skills-container {
+    margin: 4rem 0;
+   
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-container::after,
+.skills-container::before {
+    content: "";
+    width: 28.125rem;
+    height: 28.125rem;
+    border-radius: 28.125rem;
+    background: var(--bg-primary);
+    position: absolute;
+    z-index: -1;
+   filter: blur(250px);
+}
+
+.skills-container::after {
+    top: -3rem;
+    left: -5rem;
+}
+
+.skills-container::before {
+    background: var(--accent-color);
+    bottom: 0rem;
+    right: 0rem;
+}
+
+
+.skills-container h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 3.5rem;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.skills-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.skills {
+    flex: 1;
+    display: grid;
+    align-items: center;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.skills-info {
+    flex: 1;
+    margin-right: 15px;
+  
+}
+
+
+
+
+
+@media (max-width: 1025px) {
+    .skills {
+        margin-left: 1rem;
+       
+    }
+
+    .skills,
+    .skills-content {
+        grid-gap: 2rem;
+    }
+    .skills-info {
+        flex: 1;
+        margin-right: 0px;
+      
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-content {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .skills {
+        margin-left: 0;
+       
+    }
+
+    .skills-container {
+        margin-top: 6rem;
+    }
+    .skills,
+    .skills-info {
+        width: 100%;
+    }
+
+    .skills-container h5 {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+
+    .skills-container::after, 
+    .skills-container::before {
+        width: 18rem;
+        height: 18rem;
+    }
+    .skills-info {
+        flex: 1;
+        margin-right: 0px;
+      
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .skills-info {
+        width: 100%;
+    }
+    .skills-content {
+        flex-direction: column-reverse;
+
+    }
+
+    .skills {
+        margin-left: 0;
+       
+    }
+    .skills-container {
+        padding: 0;
+    }
+    .skills-container {
+        margin-top: 2rem;
+    }
+}
+@media (max-width: 380px) {
+    .skills-info {
+        width: 108%;
+    }
+    .skills-content {
+        flex-direction: column-reverse;
+
+    }
+
+    .skills {
+        width: 109%;
+       margin-left: 0;
+    }
+    .skills-container {
+        padding: 0;
+    }
+    .skills-container {
+        margin-top: 2rem;
+    }
+}
+

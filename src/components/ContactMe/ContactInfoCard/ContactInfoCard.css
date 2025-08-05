@@ -1,0 +1,55 @@
+
+.contact-details-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 55rem;
+   
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+
+}
+
+
+.contact-details-card .icon {
+    width: 3rem;
+   
+    display: flex;
+    align-items: center;
+    /* background-color: blue; */
+    justify-content: center;
+    border-radius: 45rem;
+    
+   
+}
+
+
+.icon img {
+    width: 1.5rem;
+    height: auto;
+    object-fit: contain;
+
+}
+
+.contact-details-card p {
+    font-size: 0.6rem;
+    font-size: 400;
+}
+
+@media (max-width: 768px) {
+   
+    .icon img {
+        width: 1.2rem;
+    }
+
+    .contact-details-card {
+        width: 2rem;
+        height: 2rem;
+    }
+
+}

@@ -1,0 +1,314 @@
+.leetcode-stats-container {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 20px 0;
+  color: white;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.leetcode-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.leetcode-header h3 {
+  color: #ffa116;
+  font-size: 24px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.username {
+  color: #64b5f6;
+  font-size: 16px;
+  margin: 4px 0;
+}
+
+.last-updated {
+  color: #888;
+  font-size: 12px;
+  margin: 4px 0;
+}
+
+.leetcode-overview {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.leetcode-overview .stat-card {
+  max-width: 400px;
+  width: 100%;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-card.contest-rating {
+  background: linear-gradient(135deg, rgba(255, 161, 22, 0.1), rgba(255, 193, 22, 0.05));
+  border: 1px solid rgba(255, 161, 22, 0.3);
+}
+
+.stat-card h4 {
+  color: #ffa116;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #64b5f6;
+}
+
+/* Circular Progress Chart Styles */
+.solved-chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.circular-progress {
+  position: relative;
+  display: inline-block;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+  transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+.progress-ring-background {
+  stroke: rgba(255, 255, 255, 0.1);
+}
+
+.progress-ring-progress {
+  stroke: #4caf50;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.8s ease-in-out;
+}
+
+.chart-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.chart-center .stat-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4caf50;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.total-questions {
+  font-size: 14px;
+  color: #888;
+  margin: 2px 0;
+  line-height: 1;
+}
+
+.percentage {
+  font-size: 12px;
+  color: #64b5f6;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #8bc34a);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.difficulty-breakdown {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.difficulty-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.difficulty-card.easy {
+  border-left: 4px solid #4caf50;
+}
+
+.difficulty-card.medium {
+  border-left: 4px solid #ff9800;
+}
+
+.difficulty-card.hard {
+  border-left: 4px solid #f44336;
+}
+
+.difficulty-card h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.difficulty-card.easy h4 {
+  color: #4caf50;
+}
+
+.difficulty-card.medium h4 {
+  color: #ff9800;
+}
+
+.difficulty-card.hard h4 {
+  color: #f44336;
+}
+
+.problem-count {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.difficulty-card .progress-bar {
+  height: 6px;
+  margin-bottom: 6px;
+}
+
+.easy-fill {
+  background: linear-gradient(90deg, #4caf50, #8bc34a);
+}
+
+.medium-fill {
+  background: linear-gradient(90deg, #ff9800, #ffb74d);
+}
+
+.hard-fill {
+  background: linear-gradient(90deg, #f44336, #e57373);
+}
+
+.difficulty-card p {
+  font-size: 12px;
+  color: #ccc;
+  margin: 0;
+}
+
+.acceptance-rate {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.acceptance-rate h4 {
+  color: #ffa116;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.rate-display {
+  font-size: 24px;
+  font-weight: bold;
+  color: #64b5f6;
+}
+
+.leetcode-stats-loading {
+  text-align: center;
+  padding: 40px;
+  color: #ccc;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #ffa116;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.leetcode-stats-error {
+  text-align: center;
+  padding: 20px;
+  color: #f44336;
+  background: rgba(244, 67, 54, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .leetcode-overview {
+    grid-template-columns: 1fr;
+  }
+  
+  .difficulty-breakdown {
+    grid-template-columns: 1fr;
+  }
+  
+  .leetcode-stats-container {
+    padding: 16px;
+    margin: 16px 0;
+  }
+  
+  .stat-number {
+    font-size: 24px;
+  }
+
+  .progress-ring {
+    width: 100px;
+    height: 100px;
+  }
+
+  .chart-center .stat-number {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .difficulty-breakdown {
+    grid-template-columns: 1fr;
+  }
+  
+  .progress-ring {
+    width: 90px;
+    height: 90px;
+  }
+
+  .chart-center .stat-number {
+    font-size: 18px;
+  }
+}

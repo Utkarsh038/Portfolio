@@ -1,0 +1,20 @@
+.container {
+    max-width: 1300px !important;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 2rem; /* default padding for larger screens */
+}
+
+/* For screens with width <= 1300px */
+@media (max-width: 1300px) {
+    .container {
+        padding: 0 1.5rem; /* Add padding for mid-size screens */
+    }
+}
+
+/* For mobile screens with width <= 769px */
+@media (max-width: 769px) {
+    .container {
+        padding: 0 1rem; /* Reduced padding for smaller screens */
+    }
+}

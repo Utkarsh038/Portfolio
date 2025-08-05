@@ -1,0 +1,68 @@
+
+/* Theme Variables - Default Dark Theme */
+:root {
+  --bg-primary: #060417;
+  --bg-secondary: #1a1a2e;
+  --text-primary: #ffffff;
+  --text-secondary: #e2e8f0;
+  --text-white: #ffffff;
+  --accent-color: #64b5f6;
+  --accent-hover: #1976d2;
+  --secondary-color: #ffa116;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Light Theme Variables */
+:root[data-theme="light"] {
+  --bg-primary: #f7fafc;
+  --bg-secondary: #ffffff;
+  --text-primary: #1a202c;
+  --text-secondary: #2a4365;
+  --text-white: #ffffff;
+  --accent-color: #667eea;
+  --accent-hover: #5a67d8;
+  --secondary-color: #ed8936;
+  --card-bg: #ffffff;
+  --border-color: #cbd5e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Theme Variables */
+:root[data-theme="dark"] {
+  --bg-primary: #060417;
+  --bg-secondary: #1a1a2e;
+  --text-primary: #ffffff;
+  --text-secondary: #e2e8f0;
+  --text-white: #ffffff;
+  --accent-color: #64b5f6;
+  --accent-hover: #1976d2;
+  --secondary-color: #ffa116;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+*{
+  font-family: "Poppins",sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* background-image: url("images/banner.png");
+  background-repeat:no-repeat;
+  background-size: fill; */
+ 
+}
+
+.soundbar-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 500px;
+}

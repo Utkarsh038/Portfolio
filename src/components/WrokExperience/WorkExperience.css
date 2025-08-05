@@ -1,0 +1,43 @@
+
+.experience-container {
+    margin: 4rem 0;
+    position: relative;
+}
+
+.experience-container h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.experience-content {
+    display: flex;
+    gap: 1.5rem;
+}
+
+
+
+@media (max-width: 1025px) {
+    .experience-container {
+        margin: 4rem 0;
+        position: relative;
+    }
+
+}
+@media (max-width: 768px) {
+    .experience-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem ;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .experience-container h5 {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+
+}
+
