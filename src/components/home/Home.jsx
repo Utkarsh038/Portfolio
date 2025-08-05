@@ -5,7 +5,7 @@ import {BrowserRouter, Router, Route} from "react-router"
 import Hero from '../Hero/Hero'
 import Skills from '../Skills/Skills'
 import Navbar from '../Navbar/Navbar'
-import WorkExprience from '../WrokExperience/workExprience'
+import WorkExprience from '../WrokExperience/WorkExprience'
 import ContactMe from '../ContactMe/ContactMe'
 import Work from '../Work/Work'
 import Projects from '../Projects/Projects'
