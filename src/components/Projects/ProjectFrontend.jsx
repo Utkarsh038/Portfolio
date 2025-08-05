@@ -42,7 +42,7 @@ function ProjectFrontend() {
     img3={img3}
     link = {"https://ai-career-pearl.vercel.app/"}
     />
-    <ProjectCard 
+    {/* <ProjectCard 
     title={"Task Management Website"}
     description={"Task management website enabling admins to assign, and monitor employee tasks with streamlined efficiency."}
     mainImage={image4}
@@ -50,7 +50,7 @@ function ProjectFrontend() {
     img2={img2}
     img3={img3}
     link = {"https://github.com/Ronigit01/Task-Management-Website"}
-    />
+    /> */}
     
     </div>
     
