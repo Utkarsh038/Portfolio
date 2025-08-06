@@ -30,10 +30,9 @@ function App() {
     <Routes>
     
         <Route path="/" element={<Home />}>
-          <Route index  element={<ProjectFrontend />}/>
-        
-           <Route index path="/frontend" element={<ProjectFrontend />}/>
-           <Route index path="/uiux" element={<ProjectUI />}/>
+          <Route index element={<ProjectFrontend />}/>
+          <Route path="frontend" element={<ProjectFrontend />}/>
+          <Route path="uiux" element={<ProjectUI />}/>
         </Route>
         
         {/* Catch-all route for 404 pages */}
