@@ -1,6 +1,17 @@
 
+
 .contact-form-content {
     width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem 1rem 1.5rem 1rem;
+    box-sizing: border-box;
+    background: rgba(20, 20, 40, 0.7);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 form {
@@ -12,7 +23,7 @@ form {
 .name-container {
     display: flex;
     align-items: center;
-    grid-gap: 1.5rem;   
+    grid-gap: 1.5rem;
 }
 
 form input,
@@ -89,22 +100,63 @@ form .button:hover {
 }
 
 @media (max-width: 600px) {
-
+    .contact-form-content {
+        max-width: 98vw;
+        width: 98vw;
+        padding: 1.2rem 0.2rem 1.2rem 0.2rem;
+        border-radius: 14px;
+        box-shadow: 0 2px 12px 0 rgba(0,0,0,0.15);
+    }
     .name-container {
-        display: flex;
         flex-direction: column;
+        grid-gap: 0.7rem;
+        width: 100%;
+    }
+    form {
+        width: 100%;
+        align-items: center;
+    }
+    form input,
+    form textarea {
+        font-size: 1rem;
+        padding: 0.7rem;
+        min-width: 0;
+        width: 100%;
+        margin-bottom: 0.7rem;
+        box-sizing: border-box;
+    }
+    form .button {
+        width: 100%;
+        min-width: 0;
+        padding: 0.8rem;
+        font-size: 1.1rem;
+        margin-top: 0.5rem;
     }
 }
 
-@media (max-width: 380px) {
 
-   .contact-form-content{
-    width: 108%;
-}
-.resume {
-    width: 108%;
-}
-    
+@media (max-width: 380px) {
+    .contact-form-content {
+        width: 99vw;
+        max-width: 99vw;
+        padding: 0.5rem 0.05rem 0.7rem 0.05rem;
+        border-radius: 10px;
+    }
+    .resume {
+        width: 99vw;
+        max-width: 99vw;
+    }
+    form input,
+    form textarea {
+        font-size: 0.95rem;
+        padding: 0.6rem;
+        margin-bottom: 0.5rem;
+    }
+    form .button {
+        font-size: 1rem;
+        padding: 0.7rem;
+        margin-top: 0.3rem;
+    }
 }
 
 
