@@ -27,6 +27,32 @@
   gap: 1.5rem;
 }
 
+.welcome-animated-text {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: var(--accent-color, #64b5f6);
+  text-shadow: 0 4px 24px rgba(100,181,246,0.18), 0 1px 0 #fff;
+  margin-bottom: 0.5rem;
+  animation: welcomePop 1.2s cubic-bezier(.39,.575,.565,1) both;
+  text-transform: uppercase;
+}
+
+@keyframes welcomePop {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) translateY(40px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1) translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
 .page-loader-text {
   color: var(--text-primary, #fff);
   font-size: 1.5rem;

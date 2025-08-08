@@ -42,7 +42,7 @@ function ProjectCard({ mainImage, title, description, img1, img2, img3, link }) 
     >
       <div className="project-card">
         <div className="project-image">
-          <img src={mainImage} alt="" />
+          <img src={mainImage} alt="" loading="lazy" />
         </div>
         <div className="project-info">
           <h3>{title}</h3>
@@ -51,9 +51,9 @@ function ProjectCard({ mainImage, title, description, img1, img2, img3, link }) 
 
         <div className="project-skills">
           <div className="project-icon">
-            <p><img src={img1} alt="" /></p>
-            <p><img src={img2} alt="" /></p>
-            <p><img src={img3} alt="" /></p>
+            <p><img src={img1} alt="" loading="lazy" /></p>
+            <p><img src={img2} alt="" loading="lazy" /></p>
+            <p><img src={img3} alt="" loading="lazy" /></p>
           </div>
         </div>
 

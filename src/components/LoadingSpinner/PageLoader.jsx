@@ -18,6 +18,7 @@ const PageLoader = () => {
   return (
     <div className={`page-loader-bg ${theme}`}> {/* theme class for CSS */}
       <div className="page-loader-content">
+        <div className="welcome-animated-text">WELCOME</div>
         <LoadingSpinner size="large" color="var(--accent-color, #64b5f6)" />
         <div className="page-loader-text">Loading Portfolio...</div>
       </div>
